@@ -10,4 +10,5 @@ public class PokemonApplication {
 		SpringApplication.run(PokemonApplication.class, args);
 	}
 
+
 }
