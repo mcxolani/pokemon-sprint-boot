@@ -3,6 +3,7 @@ package com.example.pokemon.pokemon.controllers;
 import com.example.pokemon.pokemon.models.Pokemon;
 import com.example.pokemon.pokemon.models.PokemonList;
 import com.example.pokemon.pokemon.services.PokemonService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -11,6 +12,9 @@ import java.util.ArrayList;
 @RequestMapping("/pokemon")
 @CrossOrigin()
 public class PokemonController {
+
+    @Value("${spring.datasource.username:https://pokeapi.co/api/v2}")
+    private String pokemonApiBaseUrl;
 
     PokemonService pokemonService;
 
